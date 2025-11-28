@@ -50,11 +50,11 @@ arm_controller:
 
     # Allow non-zero velocity at the end of the trajectory
     allow_nonzero_velocity_at_trajectory_end: true
-# gripper_controller:
+    
+# gripper_action_controller:
 #   ros__parameters:
 #     joints:
 #       - J7
-#       - J8
 #     # interface_name: position
 #     command_interfaces:
 #       - position
@@ -67,15 +67,6 @@ arm_controller:
 gripper_action_controller:
   ros__parameters:
     joint: J7
-    action_monitor_rate: 20.0
-    goal_tolerance: 0.01
-    max_effort: 100.0
-    allow_stalling: false
-    stall_velocity_threshold: 0.001
-    stall_timeout: 1.0
-
-  ros__parameters:
-    joint: J8
     action_monitor_rate: 20.0
     goal_tolerance: 0.01
     max_effort: 100.0
